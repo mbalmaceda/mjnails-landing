@@ -61,8 +61,7 @@
 		});
 
 		$('#home').backstretch([
-			'assets/images/home1.jpg',
-			'assets/images/home2.jpg',
+			'assets/images/home/home_1.png',
 		], {duration: 3000, fade: 750});
 
 
