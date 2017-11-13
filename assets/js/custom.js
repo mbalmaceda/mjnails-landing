@@ -4,12 +4,6 @@
 	 * Preloader
 	/* ---------------------------------------------- */
 
-	$.ajaxSetup({
-    	headers: {
-        	'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    	}
-	});
-
 	$(window).load(function() {
 		$('#status').fadeOut();
 		$('#preloader').delay(350).fadeOut('slow');
@@ -63,6 +57,9 @@
 		$('#home').backstretch([
 			'assets/images/home/home_1.png',
 		], {duration: 3000, fade: 750});
+
+		$('#home .intro div').addClass('wow fadeInUp');
+		$('#home .intro div').attr('data-wow-delay', '1.5s');
 
 
 		/* ---------------------------------------------- /*
