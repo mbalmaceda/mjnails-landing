@@ -47,11 +47,12 @@
 		/* ---------------------------------------------- /*
 		 * Background image.
 		/* ---------------------------------------------- */
-
 		$(".js-height-full").height($(window).height());
+		$("#preloader-img").css('padding-top', ($(window).height()/3));
 
 		$(window).resize(function(){
 			$(".js-height-full").height($(window).height());
+			$("#preloader-img").css('padding-top', $(window).height()/2);
 		});
 
 		$('#home').backstretch([
