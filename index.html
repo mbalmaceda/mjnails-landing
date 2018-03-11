@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 	<!-- Bootstrap core CSS -->
 	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<!-- Font Awesome CSS -->
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" media="screen">
 	<!-- Elegant icons CSS -->
 	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
 	<!--[if lte IE 7]>
@@ -29,6 +29,7 @@
 	<!-- Custom styles CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
 	<link href="assets/css/icons-letal.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
 	</head>
 <body>
 	<!-- Preloader -->
@@ -45,7 +46,7 @@
 	<section id="home" class="module-image js-height-full">
 		<div class="intro">
 			<div class="wow fadeInUp" >
-				<img src="assets/images/logo/logo_blanco.png" alt="Logo" width="400px">
+				<img src="assets/images/logo/logo_blanco.png" alt="Logo" class="logo-index">
 			</div>
 		</div>
 		<div class="mouse-icon">
@@ -64,7 +65,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<img src="assets/images/logo/LOGO-MARI.png" alt="" class="img-responsive" style="padding:5px 0 5px 0;width: 200px">
+					<img src="assets/images/logo/LOGO-MARI.png" alt="Logo-MJ" class="img-responsive logo-mj">
 				</div>
 				<div class="collapse navbar-collapse" id="custom-collapse">
 					<ul class="nav navbar-nav navbar-right">
@@ -74,7 +75,7 @@
 						<li><a href="#contacto">Contacto</a></li>
 					</ul>
 				</div>
-			</div><!-- .container -->
+			</div>
 		</nav>
 	</header>	<!-- Navigation end -->
 
@@ -82,20 +83,24 @@
 	<section id="portafolio" class="module paddingb-none">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3">
+				<div class="col-sm-6 col-sm-offset-3 col-xs-12">
 					<div class="module-header wow fadeInUp">
-						<h2 class="module-title">Nail Art</h2>
+						<h2 class="module-title wow fadeInDown" data-wow-delay=".1s">Nail Art</h2>
 						<div class="module-line"></div>
-						<div class="module-subtitle">
-							Descripción del nail art
+						<div class="module-subtitle wow fadeInDown"  data-wow-delay=".2s">
+							La mezcla entre manicura y el arte dio lugar a un nuevo estilo que ahora está siendo utilizado por todo el mundo, y más que nada por las chicas juveniles y adolescentes que se cansaron de los típicos diseños de uñas clásicos y aburridos que se usaban antiguamente.
 						</div>
 						<div class="module-line"></div>
 					</div>
 				</div>
+				<div class="col-sm-12 col-md-6 col-md-offset-3 col-xs-12 text-center">
+					<div class="module-sinobrillanosirve wow fadeInUpBig shine" data-wow-delay=".3s">
+						<a href="https://www.instagram.com/mj_nails.cl/" target="_blank">#sinobrillanosirve</a>
+					</div>
+				</div>
 			</div><!-- .row -->
-
 			<!-- Portfolio Filter start-->
-			<div class="row">
+			<!--<div class="row wow fadeInDown" data-wow-delay=".4s">
 				<div class="col-sm-12">
 					<ul id="filter">
 						<li class="active" data-group="all">Todas</li>
@@ -103,101 +108,85 @@
 						<li data-group="acrilicas">Acrílicas</li>
 					</ul>
 				</div>
-			</div><!-- .row -->
+			</div> -->
 			<!-- Portfolio Filter end -->
-		</div><!-- .contaier -->
-
-		<ul class="portfolio-items-container">
-			<li class="portfolio-item" data-groups="all permanente">
-				<figure>
-					<img src="assets/images/galeria/img1.png" alt="">
-					<figcaption>
-						<a href="assets/images/galeria/img1.png" class="simple-ajax-popup"></a>
-						<div class="caption-inner">
-							<h3 class="portfolio-item-title">Some work one</h3>
-							<div class="portfolio-item-desc">Slideshow</div>
-						</div>
-					</figcaption>
-				</figure>
-			</li>
-
-			<li class="portfolio-item" data-groups="all permanente">
-				<figure>
-					<img src="assets/images/galeria/prueba_1.jpg" alt="">
-					<figcaption>
-						<a href="portfolio/video.html" class="simple-ajax-popup"></a>
-						<div class="caption-inner">
-							<h3 class="portfolio-item-title">Some work one</h3>
-							<div class="portfolio-item-desc">Video</div>
-						</div>
-					</figcaption>
-				</figure>
-			</li>
-
-			<li class="portfolio-item" data-groups="all acrilicas">
-				<figure>
-					<img src="assets/images/galeria/img2.png" alt="">
-					<figcaption>
-						<a href="portfolio/image.html" class="simple-ajax-popup"></a>
-						<div class="caption-inner">
-							<h3 class="portfolio-item-title">Some work one</h3>
-							<div class="portfolio-item-desc">Image</div>
-						</div>
-					</figcaption>
-				</figure>
-			</li>
-
-			<li class="portfolio-item" data-groups="all permanente">
-				<figure>
-					<img src="assets/images/portfolio-item.jpg" alt="">
-					<figcaption>
-						<a href="portfolio/slideshow.html" class="simple-ajax-popup"></a>
-						<div class="caption-inner">
-							<h3 class="portfolio-item-title">Some work one</h3>
-							<div class="portfolio-item-desc">Slideshow</div>
-						</div>
-					</figcaption>
-				</figure>
-			</li>
-
-			<li class="portfolio-item" data-groups="all acrilicas">
-				<figure>
-					<img src="assets/images/portfolio-item.jpg" alt="">
-					<figcaption>
-						<a href="portfolio/video.html" class="simple-ajax-popup"></a>
-						<div class="caption-inner">
-							<h3 class="portfolio-item-title">Some work one</h3>
-							<div class="portfolio-item-desc">Video</div>
-						</div>
-					</figcaption>
-				</figure>
-			</li>
-
-			<li class="portfolio-item" data-groups="all acrilicas">
-				<figure>
-					<img src="assets/images/portfolio-item.jpg" alt="">
-					<figcaption>
-						<a href="portfolio/image.html" class="simple-ajax-popup"></a>
-						<div class="caption-inner">
-							<h3 class="portfolio-item-title">Some work one</h3>
-							<div class="portfolio-item-desc">Image</div>
-						</div>
-					</figcaption>
-				</figure>
-			</li>
-
-		</ul><!-- .projects-container -->
-
-	</section>
-	<section class="callout">
-		<div class="container">
 			<div class="row">
-				<div id="callout-text" class="col-md-12 text-center">
-					<a href="galeria" class="btn btn-lg btn-custom-1">Ven a conocer todos mis diseños</a>
+				<div class="col-sm-12">
+					<ul id="grid" class="grid effect-5 porfolio-masonry" data-wow-delay=".5s">
+						<li data-groups="all permanente">
+							<figure>
+								<img src="assets/images/galeria/1-nails-mc.png">
+							</figure>
+						</li>
+						<li data-groups="all permanente">
+							<figure>
+								<img src="assets/images/galeria/9-nails-arale.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all acrilicas">
+							<figure>
+								<img src="assets/images/galeria/3-nails-conyyps.png"></a>
+							</figure>
+						<li data-groups="all permanente">
+								<figure>
+									<img src="assets/images/galeria/4-nails-escupelosusana.png" alt="">
+								</figure>
+						</li>
+						<li data-groups="all permanente">
+							<figure>
+								<img src="assets/images/galeria/2-nails-escupelosusana.png">
+							</figure>
+						</li>
+						<li data-groups="all acrilicas">
+							<figure>
+								<img src="assets/images/galeria/10-nails-defqon.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all permanente">
+							<figure>
+								<img src="assets/images/galeria/7-nails-mj.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all acrilicas">
+							<figure>
+								<img src="assets/images/galeria/8-nails-laiz.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all permanente">
+							<figure>
+								<img src="assets/images/galeria/5-nails-camilaAranguiz.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all acrilicas">
+							<figure>
+								<img src="assets/images/galeria/6-nails-escupelosusana.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all permanente">
+							<figure>
+								<img src="assets/images/galeria/11-nails-jessy.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all permanente">
+							<figure>
+								<img src="assets/images/galeria/12-nails-damaris.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all acrilicas">
+							<figure>
+								<img src="assets/images/galeria/16-nails-conyyps.png" alt="">
+							</figure>
+						</li>
+						<li data-groups="all permanente">
+							<figure>
+								<img src="assets/images/galeria/14-nails-cata.png" alt="">
+							</figure>
+						</li>
+					</ul>
 				</div>
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section>	<!-- Portfolio end -->
+			</div>
+		</div>
+	</section>
 
 	<!-- Services start -->
 	<section id="servicios" class="module module-gray">
@@ -207,8 +196,10 @@
 					<div class="module-header wow fadeInUp">
 						<h2 class="module-title">Servicios</h2>
 						<div class="module-line"></div>
-						<div class="module-subtitle">
-							Aca debe ir una descripción de los servicios
+						<div class="module-subtitle-service">
+							<p>
+								Lucir unas uñas bonitas durante mucho tiempo se puede conseguir gracias a dos estilos de manicura: el <b>Esmaltado Permanente</b> y las <b>Uñas Acrílicas</b>.
+							</p>
 						</div>
 						<div class="module-line"></div>
 					</div>
@@ -216,13 +207,12 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-4">
-					<div class="iconbox wow bounceIn">
+					<div class="iconbox wow bounceIn ">
 						<div class="iconbox-icon">
-							<img src="assets/images/servicios/nail-polish.png" alt="" style="width:80px">
+							<img src="assets/images/servicios/nail-polish.svg" alt="" style="width:80px">
 						</div>
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Esmaltado</br>Permanente</h3>
-							<!-- https://www.shutterstock.com/es/image-vector/manicure-set-vector-illustration-can-be-122554732?src=SXUHjfGT3o3iS55WHnw4dQ-2-98-->
 							<div class="iconbox-desc">
 								Diseños a mano alzada
 							</div>
@@ -232,13 +222,12 @@
 				<div class="col-sm-4">
 					<div class="iconbox wow bounceIn">
 						<div class="iconbox-icon">
-							<img src="assets/images/servicios/nail.png" alt="" style="width:80px">
+							<img src="assets/images/servicios/nail.svg" alt="" style="width:80px">
 						</div>
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Uñas</br>Acrílicas</h3>
-							<!-- https://www.shutterstock.com/es/image-vector/fingernails-696892828 -->
 							<div class="iconbox-desc">
-								Las mas letales
+								Esculpidas
 							</div>
 						</div>
 					</div>
@@ -246,7 +235,7 @@
 				<div class="col-sm-4">
 					<div class="iconbox wow bounceIn">
 						<div class="iconbox-icon">
-							<img src="assets/images/servicios/mortarboard.png" alt="" style="width:80px">
+							<img src="assets/images/servicios/mortarboard.svg" alt="" style="width:80px">
 						</div>
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Cursos</br>&nbsp;</h3>
@@ -256,8 +245,8 @@
 						</div>
 					</div>
 				</div>
-			</div><!-- .row -->
-		</div><!-- .container -->
+			</div>
+		</div>
 	</section>	<!-- Services end -->
 
 	<!-- Contact start -->
@@ -300,8 +289,8 @@
 				            </ul>
 				            <!-- GG Redes sociales ponerlas abajo-->
 				            <p class="margin-bot">
-								Estamos ansiosos por leer tus comentarios, ¡Escribenos!
-							</p>
+											¿Quieres reservar una hora?, ¡Escríbenos!
+										</p>
 						</div>
 					</div>
 					<div id="ajax-response" class="alert alert-danger"></div>
@@ -309,18 +298,18 @@
 						<div class="col-md-10 col-sm-12">
 							<form id="contact-form" role="form" action="contactoInicio">
 								<div class="ajax-hidden">
-									<div class="form-group wow fadeInUp">
+									<div class="form-group wow fadeInLeft">
 										<label class="sr-only" for="nombre">Nombre</label>
 										<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre">
 									</div>
-									<div class="form-group wow fadeInUp" data-wow-delay=".1s">
+									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
 										<label class="sr-only" for="email">Email</label>
 										<input type="email" id="email" class="form-control" name="email" placeholder="Email">
 									</div>
-									<div class="form-group wow fadeInUp" data-wow-delay=".2s">
+									<div class="form-group wow fadeInLeft" data-wow-delay=".2s">
 										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje"></textarea>
 									</div>
-									<button type="submit" class="btn btn-block btn-custom-2 wow fadeInUp" data-wow-delay=".3s">Enviar
+									<button type="submit" class="btn btn-block btn-custom-2 wow fadeInLeft" data-wow-delay=".3s">Enviar
 									</button>
 								</div>
 							</form>
@@ -329,19 +318,20 @@
 				</div>
 				<div class="col-md-5 col-sm-12 col-md-offset-1">
 					<div class="row">
-						<div class="col-sm-12 module-subtitle-contact">
+						<div class="col-sm-12 module-subtitle-contact wow fadeInRightBig">
 							<p><b>Encuentranos en:</b></p>
 							<ul id="contact-ico" class="list-unstyled margin-bot">
-				                <li>
-				                	<p><i class="fa fa-home fa-fw"></i> Av. Pajaritos #3195 Oficina 1115, Maipú.</p>
-				                </li>
-				            </ul>
+	                <li>
+	                	<p><i class="fa fa-home fa-fw"></i> Av. Pajaritos #3195 Oficina 1115, Maipú.</p>
+										<p><i class="fa fa-train fa-fw"></i> Metro Santiago Bueras</p>
+	                </li>
+	            </ul>
 						</div>
 					</div>
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1320831514545!2d-70.75908878518777!3d-33.49794050733641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c32edee2766f%3A0x1f8cf402f49f515!2sAv.+Los+Pajaritos+3195%2C+Maip%C3%BA%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1497137305900" width="100%" height="505" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
-			</div><!-- .row -->
-		</div><!-- .container -->
+			</div>
+		</div>
 	</section>	<!-- Contact end -->
 
 	<!-- Footer start -->
@@ -349,32 +339,44 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<ul class="social-links social-icons icon-circle">
-						<li>
-							<a href="https://www.facebook.com/mariajesusnails/" class="wow fadeInUp" target="_blank"><i class="fa fa-facebook"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.instagram.com/mj_nails.cl/" class="wow fadeInUp" data-wow-delay=".1s" target="_blank">
-								<i class="fa fa-instagram"></i>
-							</a>
-						</li>
-					</ul>
+					<div id="circ">
+					  <ul>
+					    <li class="animated zoomIn">
+					      <div class="back"></div>
+					      <div class="icon">
+									<a href="https://www.facebook.com/mariajesusnails/" class="wow fadeInUp" target="_blank">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+					      </div>
+					    </li>
+					    <li class="animated zoomIn delayfive">
+					      <div class="back"></div>
+					      <div class="icon">
+									<a href="https://www.instagram.com/mj_nails.cl/" class="wow fadeInUp" target="_blank">
+										<i class="fab fa-instagram"></i>
+									</a>
+					      </div>
+					    </li>
+					  </ul>
+					</div>
 				</div>
-		</div><!-- .container -->
-	</footer>	<!-- Footer end -->
+				<div class="col-sm-12">
+					<p class="text-center">
+						&copy; 2018 María Jesús Nails - Todos los derechos reservados.
+					</p>
+				</div>
+		</div>
+	</footer>
 
 	<!-- Scroll-up -->
 	<div class="scroll-up">
 		<a href="#home"><i class="fa fa-angle-double-up"></i></a>
 	</div>
 
-	<!-- Javascript files -->
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.magnific-popup.min.js"></script>
 	<script src="assets/js/jquery.backstretch.min.js"></script>
-	<script src="assets/js/imagesloaded.pkgd.js"></script>
 	<script src="assets/js/jquery.shuffle.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
 	<script src="assets/js/jquery.fitvids.js"></script>
@@ -384,6 +386,26 @@
 	<!-- Custom scripts -->
 	<script src="assets/js/custom.js"></script>
 	<script src="assets/js/util.js"></script>
-	<script src="assets/js/custom-shuffle-init.js"></script>
+
+	<script src="assets/js/modernizr.custom.js"></script>
+	<script src="assets/js/masonry.pkgd.min.js"></script>
+	<script src="assets/js/imagesloaded.js"></script>
+	<script src="assets/js/classie.js"></script>
+	<script src="assets/js/AnimOnScroll.js"></script>
+	<script>
+		new AnimOnScroll( document.getElementById( 'grid' ), {
+			minDuration : 0.4,
+			maxDuration : 0.7,
+			viewportFactor : 0.2
+		} );
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115443040-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-115443040-1');
+	</script>
 </body>
 </html>

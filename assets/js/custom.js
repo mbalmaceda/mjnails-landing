@@ -67,7 +67,7 @@
 		 * Initialize shuffle plugin
 		/* ---------------------------------------------- */
 
-		var $portfolioContainer = $('.portfolio-items-container');
+		var $portfolioContainer = $('.porfolio-masonry');
 
 		$('#filter li').on('click', function (e) {
 			e.preventDefault();
@@ -151,7 +151,7 @@
 					var errors = data.responseJSON;
 					var list = $('<ul></ul>');
 		            $.each( errors, function( key, value ) {
-		                list.append('<li>'+value[0]+'</li>'); 
+		                list.append('<li>'+value[0]+'</li>');
 		            });
 		            ajaxResponse('ajax-response','alert-danger',list);
 				}
