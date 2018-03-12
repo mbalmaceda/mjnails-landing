@@ -138,6 +138,7 @@
 				success: function(data) {
 					$('#contact-form button').empty();
 					$('#contact-form button').append('Enviar');
+					console.log(data);
 					if (data.resultado == 1) {
 						$('#contact-form').fadeOut(500);
 						ajaxResponse('ajax-response','alert-success',data.mensaje);

@@ -296,18 +296,18 @@
 					<div id="ajax-response" class="alert alert-danger"></div>
 					<div class="row">
 						<div class="col-md-10 col-sm-12">
-							<form id="contact-form" role="form" action="contactoInicio">
+							<form id="contact-form" role="form" action="assets/contact/send_mail.php">
 								<div class="ajax-hidden">
 									<div class="form-group wow fadeInLeft">
 										<label class="sr-only" for="nombre">Nombre</label>
-										<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre">
+										<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre" required>
 									</div>
 									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
 										<label class="sr-only" for="email">Email</label>
-										<input type="email" id="email" class="form-control" name="email" placeholder="Email">
+										<input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
 									</div>
 									<div class="form-group wow fadeInLeft" data-wow-delay=".2s">
-										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje"></textarea>
+										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje" required></textarea>
 									</div>
 									<button type="submit" class="btn btn-block btn-custom-2 wow fadeInLeft" data-wow-delay=".3s">Enviar
 									</button>
