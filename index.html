@@ -287,27 +287,27 @@
 				                  	</p>
 				                </li>
 				            </ul>
-				            <!-- GG Redes sociales ponerlas abajo-->
 				            <p class="margin-bot">
-											¿Quieres reservar una hora?, ¡Escríbenos!
-										</p>
+								¿Quieres reservar una hora?, ¡Escríbenos!
+							</p>
 						</div>
 					</div>
-					<div id="ajax-response" class="alert alert-danger"></div>
+					
 					<div class="row">
 						<div class="col-md-10 col-sm-12">
+							<div id="ajax-response" class="alert alert-danger"></div>
 							<form id="contact-form" role="form" action="assets/contact/send_mail.php">
 								<div class="ajax-hidden">
 									<div class="form-group wow fadeInLeft">
 										<label class="sr-only" for="nombre">Nombre</label>
-										<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre" required>
+										<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre" required minlength="5">
 									</div>
 									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
 										<label class="sr-only" for="email">Email</label>
 										<input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
 									</div>
 									<div class="form-group wow fadeInLeft" data-wow-delay=".2s">
-										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje" required></textarea>
+										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje" required minlength="10"></textarea>
 									</div>
 									<button type="submit" class="btn btn-block btn-custom-2 wow fadeInLeft" data-wow-delay=".3s">Enviar
 									</button>
@@ -321,14 +321,14 @@
 						<div class="col-sm-12 module-subtitle-contact wow fadeInRightBig">
 							<p><b>Encuentranos en:</b></p>
 							<ul id="contact-ico" class="list-unstyled margin-bot">
-	                <li>
-	                	<p><i class="fa fa-home fa-fw"></i> Av. Pajaritos #3195 Oficina 1115, Maipú.</p>
-										<p><i class="fa fa-train fa-fw"></i> Metro Santiago Bueras</p>
-	                </li>
-	            </ul>
+				                <li>
+				                	<p><i class="fa fa-home fa-fw"></i> Av. Pajaritos #3195 Oficina 1115, Maipú.</p>
+									<p><i class="fa fa-train fa-fw"></i> Metro Santiago Bueras</p>
+				                </li>
+				            </ul>
 						</div>
 					</div>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1320831514545!2d-70.75908878518777!3d-33.49794050733641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c32edee2766f%3A0x1f8cf402f49f515!2sAv.+Los+Pajaritos+3195%2C+Maip%C3%BA%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1497137305900" width="100%" height="505" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe class="wow fadeInRightBig" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1320831514545!2d-70.75908878518777!3d-33.49794050733641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c32edee2766f%3A0x1f8cf402f49f515!2sAv.+Los+Pajaritos+3195%2C+Maip%C3%BA%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1497137305900" width="100%" height="505" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
@@ -344,17 +344,17 @@
 					    <li class="animated zoomIn">
 					      <div class="back"></div>
 					      <div class="icon">
-									<a href="https://www.facebook.com/mariajesusnails/" class="wow fadeInUp" target="_blank">
-										<i class="fab fa-facebook-f"></i>
-									</a>
+								<a href="https://www.facebook.com/mariajesusnails/" class="wow fadeInUp" target="_blank">
+									<i class="fab fa-facebook-f"></i>
+								</a>
 					      </div>
 					    </li>
 					    <li class="animated zoomIn delayfive">
 					      <div class="back"></div>
 					      <div class="icon">
-									<a href="https://www.instagram.com/mj_nails.cl/" class="wow fadeInUp" target="_blank">
-										<i class="fab fa-instagram"></i>
-									</a>
+								<a href="https://www.instagram.com/mj_nails.cl/" class="wow fadeInUp" target="_blank">
+									<i class="fab fa-instagram"></i>
+								</a>
 					      </div>
 					    </li>
 					  </ul>
