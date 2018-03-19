@@ -104,7 +104,7 @@
 		 * A jQuery plugin for fluid width video embeds
 		/* ---------------------------------------------- */
 
-		$('body').fitVids();
+		/*$('body').fitVids();*/
 
 		/* ---------------------------------------------- /*
 		 * E-mail validation
