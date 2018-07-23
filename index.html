@@ -19,13 +19,12 @@
 	<!--[if lte IE 7]>
 		<script src="assets/js/icons-lte-ie7.js"></script>
 	<![endif]-->
-	<!-- Magnific-popup lightbox -->
-	<link href="assets/css/magnific-popup.css" rel="stylesheet">
 	<!-- Owl Carousel -->
 	<link href="assets/css/owl.theme.css" rel="stylesheet">
 	<link href="assets/css/owl.carousel.css" rel="stylesheet">
 	<!-- Animate css -->
 	<link href="assets/css/animate.css" rel="stylesheet">
+	<link href="assets/css/datepicker.css" rel="stylesheet">
 	<!-- Custom styles CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
 	<link href="assets/css/icons-letal.css" rel="stylesheet" media="screen">
@@ -257,47 +256,36 @@
 					<div class="module-header">
 						<h2 class="module-title">Contacto</h2>
 						<div class="module-line"></div>
+						<div class="module-subtitle-service">
+							<p>
+								L@s esperamos de Lunes a Viernes desde las 11:00 a 19:00 horas, y aca poner algo para el enganche po
+							</p>
+						</div>
+						<div class="module-line"></div>
 					</div>
 				</div>
 			</div><!-- .row -->
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<div class="row">
-						<div class="col-md-10 col-sm-12 module-subtitle-contact">
-							<p>
-								<b>Horario de Atención:</b>
-							</p>
-							<p class="margin-bot">
-								Lunes a Viernes de 15:00 a 20:00 hrs
-							</p>
-							<p>
-								<b>Contáctanos:</b>
-							</p>
-							<ul id="contact-ico" class="list-unstyled margin-bot">
-				                <li>
-				                  	<p>
-				                  		<i class="fa fa-envelope fa-fw"></i>
-				                  		<a href="mailto:mariajesus@mjnails.cl" target="_top">mariajesus@mjnails.cl</a>
-				                  	</p>
-				                </li>
-				                <li>
-				                  	<p>
-				                  		<i class="fa fa-phone fa-fw"></i>
-				                  		<a href="tel:+569" target="_top">+56968410969</a>
-				                  	</p>
-				                </li>
-				            </ul>
-				            <p class="margin-bot">
-								¿Quieres reservar una hora?, ¡Escríbenos!
-							</p>
-						</div>
-					</div>
-
-					<div class="row">
 						<div class="col-md-10 col-sm-12">
 							<div id="ajax-response" class="alert alert-danger"></div>
-							<form id="contact-form" role="form" action="assets/contact/send_mail.php">
-								<div class="ajax-hidden">
+							<!--<form id="contact-form" role="form" action="assets/contact/send_mail.php">-->
+							<form id="contact-form" role="form">
+								<div class="ajax-hidden ">
+									<div class="form-group wow fadeInLeft module-subtitle-contact" data-wow-delay=".2s">
+										<p class="margin-bot contacto">
+											<b>¿Quieres reservar una hora?, Escríbenos!</b>
+										</p>
+									</div>
+									<div class="form-group wow fadeInLeft">
+										<label class="radio-inline">
+										  <input type="radio" name="asunto" value="1"> <label>Agendar Hora</label>
+										</label>
+										<label id="radioAsunto" class="radio-inline">
+										  <input type="radio" name="asunto" value="2"> <label>Consulta</label>
+										</label>
+									</div>
 									<div class="form-group wow fadeInLeft">
 										<label class="sr-only" for="nombre">Nombre</label>
 										<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre" required minlength="5">
@@ -306,10 +294,55 @@
 										<label class="sr-only" for="email">Email</label>
 										<input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
 									</div>
-									<div class="form-group wow fadeInLeft" data-wow-delay=".2s">
-										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje" required minlength="10"></textarea>
+									<div class="form-group input-group wow fadeInLeft" data-wow-delay=".1s">
+										<label class="sr-only" for="telefono">Teléfono</label>
+										<span class="input-group-addon">+56</span>
+										<input type="text" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required minlength="9" maxlength="9">
 									</div>
-									<button type="submit" class="btn btn-block btn-custom-2 wow fadeInLeft" data-wow-delay=".3s">Enviar
+									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
+										<label class="sr-only" for="comuna">Comuna</label>
+										<input type="text" id="comuna" class="form-control" name="comuna" placeholder="Comuna">
+									</div>
+									<div class="form-group wow fadeInLeft" data-wow-delay=".2s">
+										<label class="sr-only" for="servicio">Servicio</label>
+										<select class="form-control" name="servicio">
+										  <option value="">Seleccione un servicio</option>
+										  <option value="1">Esmaltado permanente</option>
+										  <option value="2">Uñas Acrílicas</option>
+										  <option value="3">Relleno Acrílicas + Esmaltado permanente</option>
+										  <option value="4">Retiro Esmaltado permanente</option>
+										  <option value="5">Retiro Uñas acrílicas</option>
+										</select>
+									</div>
+									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
+										<label for="dia">Seleccione el día</label>
+										<div class="input-group">
+											<span id="calendarForm" class="input-group-addon">
+												<i class="fa fa-calendar" aria-hidden="true"></i>
+											</span>
+											<input type="text" id="dia" name="dia" class="form-control" readonly placeholder="Fecha">
+									    </div>
+									</div>
+									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
+										<label for="hora">Seleccione la hora</label>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-clock" aria-hidden="true"></i>
+											</span>
+											<select class="form-control" name="hora">
+											  <option value="">Seleccione una hora</option>
+											  <option value="1">11:00 AM</option>
+											  <option value="2">14:30 PM</option>
+											  <option value="3">16:00 PM</option>
+											  <option value="4">17:30 PM</option>
+											  <option value="5">19:00 PM</option>
+											</select>
+									    </div>
+									</div>
+									<div class="form-group wow fadeInLeft" data-wow-delay=".3s">
+										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje" required minlength="10" maxlength="500"></textarea>
+									</div>
+									<button type="submit" class="btn btn-block btn-custom-2 wow fadeInLeft" data-wow-delay=".4s">Enviar
 									</button>
 								</div>
 							</form>
@@ -319,12 +352,25 @@
 				<div class="col-md-5 col-sm-12 col-md-offset-1">
 					<div class="row">
 						<div class="col-sm-12 module-subtitle-contact wow fadeInRightBig">
-							<p><b>Encuentranos en:</b></p>
+							<p class="margin-bot contacto">
+								<b>MJ Nails Salón</b>
+							</p>
 							<ul id="contact-ico" class="list-unstyled margin-bot">
 				      		<li>
-	                	<p><i class="fa fa-home fa-fw"></i> Av. Pajaritos #3195 Oficina 1115, Maipú.</p>
-										<p><i class="fa fa-train fa-fw"></i> Metro Santiago Bueras</p>
-									</li>
+				      			<p>
+									<i class="fa fa-clock fa-fw"></i> Lunes a Viernes desde 11:00 a 19:00 horas
+								</p>
+								<p>
+									<i class="fa fa-envelope fa-fw"></i> 
+									<a href="mailto:mariajesus@mjnails.cl">mariajesus@mjnails.cl</a>
+								</p>
+	                			<p>
+	                				<i class="fa fa-home fa-fw"></i> Av. Pajaritos #3195 Oficina 1115, Maipú.
+	                			</p>
+								<p>
+									<i class="fa fa-train fa-fw"></i> Metro Santiago Bueras
+								</p>
+							</li>
 				        </ul>
 						</div>
 					</div>
@@ -375,10 +421,12 @@
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/bootstrap-datepicker.js"></script>
+	<script src="assets/js/locales/bootstrap-datepicker.es.js" charset="UTF-8"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
 	<script src="assets/js/jquery.backstretch.min.js"></script>
 	<script src="assets/js/jquery.shuffle.min.js"></script>
-  <script src="assets/js/jquery.sticky.js"></script>
+  	<script src="assets/js/jquery.sticky.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<!-- Custom scripts -->
 	<script src="assets/js/custom.js"></script>

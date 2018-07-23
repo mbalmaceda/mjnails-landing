@@ -4,7 +4,7 @@ require 'PHPMailer/extras/Security.php';
 
 define('SMTP_HOST', 'starbuck.asoshared.com'); // Hostname of the mail server
 define('SMTP_USERNAME', 'no-reply@mjnails.cl'); // Username for SMTP authentication any valid email created in your domain
-define('SMTP_PASSWORD', 'zg4T#UfgUgyE'); // Password for SMTP authentication
+define('SMTP_PASSWORD', 'Mirko123.'); // Password for SMTP authentication
 define('SMTP_PORT', 465); // Port of the SMTP like to be 25, 80, 465 or 587
 
 // To address who will receive this email
@@ -34,6 +34,7 @@ if (isset($_POST['nombre']) AND isset($_POST['email']) AND isset($_POST['mensaje
     try {
         $mail = new PHPMailer();
         $mail->isSMTP();
+        $mail->CharSet = 'UTF-8';
         $mail->Host = SMTP_HOST;
         $mail->Port = SMTP_PORT;
         $mail->SMTPSecure = 'ssl';

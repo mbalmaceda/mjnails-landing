@@ -434,13 +434,13 @@ textarea.form-control {
 .module-subtitle {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-style: italic;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .module-subtitle-service {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-style: italic;
-	font-size: 14px;
+	font-size: 15px;
 	color: #222;
 }
 
@@ -524,7 +524,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 .iconbox {
-	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
 	border-bottom: 1px solid #d4d4d4;
 	text-align: center;
 	padding: 40px 20px;
@@ -1232,6 +1232,10 @@ font-size: 14px;
 }
 .margin-bot{
 	margin-bottom:20px;
+}
+.margin-bot.contacto{
+	font-size: 18px;
+	color: #BB3C8D;
 }
 .module-subtitle-contact {
 	font-family: Georgia, "Times New Roman", Times, serif;
