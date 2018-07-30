@@ -37,9 +37,11 @@ if(isset($_POST['enviar'])) {
                 //echo "Se han insertado los datos ";
             } else{
                 echo "ERROR: Could not execute query: $sql. " . mysqli_error($link);
+                return 0;
             }
         } else{
             echo "ERROR: Could not prepare query: $sql. " . mysqli_error($link);
+            return 0;
         }
         // Close statement
         mysqli_stmt_close($stmt);
