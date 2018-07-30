@@ -33,7 +33,8 @@
 		    autoclose : true,
 		    todayBtn : true,
 		    daysOfWeekDisabled : [0,6],
-		    startDate : d
+		    startDate : d,
+		    keyboardNavigation : false
 		});
 
 		$('#calendarForm').on('click', function() {
@@ -114,15 +115,9 @@
 
 		$("#contact-form").validate({
 		    rules: {
-		      // The key name on the left side is the name attribute
-		      // of an input field. Validation rules are defined
-		      // on the right side
-		      asunto: "required",
 		      nombre: "required",		
 		      email: {
 		        required: true,
-		        // Specify that email should be validated
-		        // by the built-in "email" rule
 		        email: true
 		      },
 		      telefono: {
@@ -130,14 +125,14 @@
 		      	minlength: 9
 		      },
 		      servicio: "required",
-		      dia: "required",
+		      fecha: "required",
 		      hora: "required",
 		      mensaje: "required"
 		    },
 		    // Specify validation error messages
 		    messages: {
-		      asunto: "¿En qué te podemos ayudar hoy?",
-		      nombre: "Necesitamos saber tu nombre!",
+		      //asunto: "¿En qué te podemos ayudar hoy?",
+		      nombre: "Nos interesa saber tu nombre!",
 		      email: {
 		      	required : "Nos interesa tu email",
 		      	email : "El formato del email no es correcto"
@@ -147,14 +142,40 @@
 		        minlength: "Necesitamos al menos {0} digitos para poder contactarnos!. Ej: 912345678"
 		      },
 		      servicio: "Queremos saber lo que tus uñas necesitan!",
-		      dia: "",
+		      fecha: "",
 		      hora: "",
-		      mensaje: "Nos interesa tu opinión :), escríbenos algo!"
+		      mensaje: "Nos interesa tu opinión, escríbenos algo!"
 		    },
 		    // Make sure the form is submitted to the destination defined
 		    // in the "action" attribute of the form when valid
 		    submitHandler: function(form) {
-		      form.submit();
+		      	var responseMessage = $('#ajax-response');
+
+				$.ajax({
+					type: 'POST',
+					url: $(form).attr('action'),
+					dataType: 'json',
+					data: $(form).serialize() ,
+					beforeSend: function(result) {
+						$.LoadingOverlay("show");
+						responseMessage.empty();
+						responseMessage.removeAttr('class')
+					},
+					success: function(data) {
+						$.LoadingOverlay("hide");
+						if (data == 1) {
+							$('#contact-form').fadeOut(500);
+							ajaxResponse('ajax-response','alert-success','Muchas gracias por escribirnos, ¡Te contactaremos muy pronto!');
+						}else {
+							ajaxResponse('ajax-response','alert-danger','Ha ocurrido un error al enviar el mensaje, favor intentar nuevamente.');
+						}
+					},
+					error: function (data) {
+						$('#contact-form button').empty();
+						$('#contact-form button').append('Enviar');
+			            ajaxResponse('ajax-response','alert-danger','<p>'+data.responseText+'</p>');
+					}
+				});
 		    },
 	    	errorElement: "em",
 			errorPlacement: function ( error, element ) {
@@ -165,8 +186,9 @@
 				// in order to add icons to inputs
 				element.parents( ".form-group" ).addClass( "has-feedback" );
 
-				if ( element.prop( "type" ) === "radio" ) {					
-					error.insertAfter(document.getElementById("radioAsunto"));
+				if ( element.prop( "type" ) === "radio" ) {	
+					//esto no funca				
+					//error.insertAfter(document.getElementById("radioAsunto"));
 				} else {
 					error.insertAfter( element );
 				}
@@ -213,42 +235,8 @@
 
 		/*$('#contact-form').submit(function(e) {
 			e.preventDefault();
+		});
+		*/
 
-			var responseMessage = $('#ajax-response');
-
-			$.ajax({
-				type: 'POST',
-				url: $(this).attr('action'),
-				dataType: 'json',
-				data: $(this).serialize() ,
-				beforeSend: function(result) {
-					$('#contact-form button').empty();
-					$('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Espere...');
-					responseMessage.empty();
-					responseMessage.removeAttr('class')
-				},
-				success: function(data) {
-					$('#contact-form button').empty();
-					$('#contact-form button').append('Enviar');
-					console.log(data);
-					if (data == 1) {
-						$('#contact-form').fadeOut(500);
-						ajaxResponse('ajax-response','alert-success','Muchas gracias por escribirnos, ¡Te contactaremos muy pronto!');
-					}else {
-						ajaxResponse('ajax-response','alert-danger','Ha ocurrido un error al enviar el mensaje, favor intentar nuevamente.');
-					}
-				},
-				error: function (data) {
-					$('#contact-form button').empty();
-					$('#contact-form button').append('Enviar');
-					var errors = data.responseJSON;
-					var list = $('<ul></ul>');
-		            $.each( errors, function( key, value ) {
-		                list.append('<li>'+value[0]+'</li>');
-		            });
-		            ajaxResponse('ajax-response','alert-danger',list);
-				}
-			});
-		});*/
 	});
 })(jQuery);

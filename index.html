@@ -271,14 +271,14 @@
 						<div class="col-md-10 col-sm-12">
 							<div id="ajax-response" class="alert alert-danger"></div>
 							<!--<form id="contact-form" role="form" action="assets/contact/send_mail.php">-->
-							<form id="contact-form" role="form">
+							<form id="contact-form" role="form" action="assets/contact/send_mail.php">
 								<div class="ajax-hidden ">
-									<div class="form-group wow fadeInLeft module-subtitle-contact" data-wow-delay=".2s">
+									<div class="form-group wow fadeInLeft module-subtitle-contact" data-wow-delay=".0s">
 										<p class="margin-bot contacto">
 											<b>¿Quieres reservar una hora?, Escríbenos!</b>
 										</p>
 									</div>
-									<div class="form-group wow fadeInLeft">
+									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
 										<label class="radio-inline">
 										  <input type="radio" name="asunto" value="1"> <label>Agendar Hora</label>
 										</label>
@@ -286,24 +286,24 @@
 										  <input type="radio" name="asunto" value="2"> <label>Consulta</label>
 										</label>
 									</div>
-									<div class="form-group wow fadeInLeft">
+									<div class="form-group wow fadeInLeft" data-wow-delay=".2s">
 										<label class="sr-only" for="nombre">Nombre</label>
-										<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre" required minlength="5">
+										<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre" required>
 									</div>
-									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
+									<div class="form-group wow fadeInLeft" data-wow-delay=".2s">
 										<label class="sr-only" for="email">Email</label>
 										<input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
 									</div>
-									<div class="form-group input-group wow fadeInLeft" data-wow-delay=".1s">
+									<div class="form-group input-group wow fadeInLeft" data-wow-delay=".4s">
 										<label class="sr-only" for="telefono">Teléfono</label>
 										<span class="input-group-addon">+56</span>
 										<input type="text" id="telefono" class="form-control" name="telefono" placeholder="Teléfono" required minlength="9" maxlength="9">
 									</div>
-									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
+									<div class="form-group wow fadeInLeft" data-wow-delay=".5s">
 										<label class="sr-only" for="comuna">Comuna</label>
 										<input type="text" id="comuna" class="form-control" name="comuna" placeholder="Comuna">
 									</div>
-									<div class="form-group wow fadeInLeft" data-wow-delay=".2s">
+									<div class="form-group wow fadeInLeft" data-wow-delay=".6s">
 										<label class="sr-only" for="servicio">Servicio</label>
 										<select class="form-control" name="servicio">
 										  <option value="">Seleccione un servicio</option>
@@ -314,17 +314,17 @@
 										  <option value="5">Retiro Uñas acrílicas</option>
 										</select>
 									</div>
-									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
-										<label for="dia">Seleccione el día</label>
+									<div class="form-group wow fadeInLeft" data-wow-delay=".7s">
+										<label for="dia">¿Que día necesitas atención?</label>
 										<div class="input-group">
 											<span id="calendarForm" class="input-group-addon">
 												<i class="fa fa-calendar" aria-hidden="true"></i>
 											</span>
-											<input type="text" id="dia" name="dia" class="form-control" readonly placeholder="Fecha">
+											<input type="text" id="dia" name="fecha" class="form-control" readonly placeholder="Fecha">
 									    </div>
 									</div>
-									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
-										<label for="hora">Seleccione la hora</label>
+									<div class="form-group wow fadeInLeft" data-wow-delay=".8s">
+										<label for="hora">¿A que hora?</label>
 										<div class="input-group">
 											<span class="input-group-addon">
 												<i class="fa fa-clock" aria-hidden="true"></i>
@@ -339,11 +339,10 @@
 											</select>
 									    </div>
 									</div>
-									<div class="form-group wow fadeInLeft" data-wow-delay=".3s">
-										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje" required minlength="10" maxlength="500"></textarea>
+									<div class="form-group wow fadeInLeft" data-wow-delay=".9s">
+										<textarea class="form-control" id="mensaje" name="mensaje" rows="7" placeholder="Mensaje" required minlength="5" maxlength="500"></textarea>
 									</div>
-									<button type="submit" class="btn btn-block btn-custom-2 wow fadeInLeft" data-wow-delay=".4s">Enviar
-									</button>
+									<input type="submit" name="enviar" class="btn btn-block btn-custom-2 wow fadeInLeft" value="Enviar" data-wow-delay=".10s">
 								</div>
 							</form>
 						</div>
@@ -424,6 +423,7 @@
 	<script src="assets/js/bootstrap-datepicker.js"></script>
 	<script src="assets/js/locales/bootstrap-datepicker.es.js" charset="UTF-8"></script>
 	<script src="assets/js/jquery.validate.min.js"></script>
+	<script src="assets/js/loadingoverlay.min.js"></script>
 	<script src="assets/js/jquery.backstretch.min.js"></script>
 	<script src="assets/js/jquery.shuffle.min.js"></script>
   	<script src="assets/js/jquery.sticky.js"></script>
