@@ -167,6 +167,7 @@
 						$.LoadingOverlay("hide");
 						if (data == 1) {
 							$('#contact-form').fadeOut(500);
+							ajaxResponse('ajax-response','¡Gracias por contactarnos!, Por favor espera nuestro correo de confirmación de la hora');
 							swal({
 							  title: '¡Gracias por contactarnos!',
 							  text: 'Por favor espera nuestro correo de confirmación de la hora',
@@ -174,6 +175,7 @@
 							  confirmButtonText: 'Aceptar'
 							})
 						}else {
+							ajaxResponse('ajax-response','alert-danger','Ha ocurrido un error al enviar el mensaje, favor intentar nuevamente.');
 							swal({
 							  title: 'Ha ocurrido un error',
 							  text: 'Por favor intentalo nuevamente',
@@ -185,6 +187,7 @@
 					error: function (data) {
 						$('#contact-form button').empty();
 						$('#contact-form button').append('Enviar');
+						ajaxResponse('ajax-response','alert-danger','<p>'+data.responseText+'</p>');
 			           	swal({
 							  title: 'Ha ocurrido un error',
 							  text: 'Por favor intentalo nuevamente',
