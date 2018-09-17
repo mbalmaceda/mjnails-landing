@@ -122,7 +122,8 @@
 		      },
 		      telefono: {
 		      	required : true,
-		      	minlength: 9
+		      	minlength: 9,
+		      	number: true
 		      },
 		      servicio: "required",
 		      fecha: "required",
@@ -139,7 +140,8 @@
 		      },
 		      telefono: {
 		        required: "Debes ingresar los 9 digitos de tu numero telefónico. Ej: 912345678",
-		        minlength: "Necesitamos al menos {0} digitos para poder contactarnos!. Ej: 912345678"
+		        minlength: "Necesitamos al menos {0} digitos para poder contactarnos!. Ej: 912345678",
+		        number : "Debes ingresar un numero válido"
 		      },
 		      servicio: "Queremos saber lo que tus uñas necesitan!",
 		      fecha: "",
@@ -159,21 +161,36 @@
 					beforeSend: function(result) {
 						$.LoadingOverlay("show");
 						responseMessage.empty();
-						responseMessage.removeAttr('class')
+						responseMessage.removeAttr('class');
 					},
 					success: function(data) {
 						$.LoadingOverlay("hide");
 						if (data == 1) {
 							$('#contact-form').fadeOut(500);
-							ajaxResponse('ajax-response','alert-success','Muchas gracias por escribirnos, ¡Te contactaremos muy pronto!');
+							swal({
+							  title: '¡Gracias por contactarnos!',
+							  text: 'Por favor espera nuestro correo de confirmación de la hora',
+							  type: 'success',
+							  confirmButtonText: 'Aceptar'
+							})
 						}else {
-							ajaxResponse('ajax-response','alert-danger','Ha ocurrido un error al enviar el mensaje, favor intentar nuevamente.');
+							swal({
+							  title: 'Ha ocurrido un error',
+							  text: 'Por favor intentalo nuevamente',
+							  type: 'error',
+							  confirmButtonText: 'Aceptar'
+							})
 						}
 					},
 					error: function (data) {
 						$('#contact-form button').empty();
 						$('#contact-form button').append('Enviar');
-			            ajaxResponse('ajax-response','alert-danger','<p>'+data.responseText+'</p>');
+			           	swal({
+							  title: 'Ha ocurrido un error',
+							  text: 'Por favor intentalo nuevamente',
+							  type: 'error',
+							  confirmButtonText: 'Aceptar'
+							})
 					}
 				});
 		    },

@@ -29,7 +29,9 @@
 	<link href="assets/css/style.css?v.1" rel="stylesheet" media="screen">
 	<link href="assets/css/icons-letal.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
-	</head>
+	<link rel="stylesheet" type="text/css" href="assets/css/lightbox.min.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/sweetalert2.min.css"/>
+</head>
 <body>
 	<!-- Preloader -->
 	<div id="preloader">
@@ -97,7 +99,7 @@
 						<a href="https://www.instagram.com/mj_nails.cl/" target="_blank">#sinobrillanosirve</a>
 					</div>
 				</div>
-			</div><!-- .row -->
+			</div>
 			<!-- Portfolio Filter start-->
 			<!--<div class="row wow fadeInDown" data-wow-delay=".4s">
 				<div class="col-sm-12">
@@ -113,72 +115,121 @@
 				<div class="col-sm-12">
 					<ul id="grid" class="grid effect-1" data-wow-delay=".5s">
 						<li data-groups="all permanente">
-							<figure>
+							<figure class="hovereffect">
 								<img src="assets/images/galeria/1-nails-mc.png">
+								<div class="overlay">
+						           	<a class="info" href="assets/images/galeria/imgrealsize/1-nails-mc.jpg" data-lightbox="image-1" data-title="MC">
+						           		<i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+						           	</a>
+						        </div>
 							</figure>
 						</li>
 						<li data-groups="all permanente">
-							<figure>
+							<figure class="hovereffect">
 								<img src="assets/images/galeria/9-nails-arale.png" alt="">
+								<div class="overlay">
+						           <a class="info" href="assets/images/galeria/imgrealsize/9-nails-arale.jpg" data-lightbox="image-1" data-title="Arale Arale!">
+										<i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+								 	</a>
+						        </div>
 							</figure>
 						</li>
 						<li data-groups="all acrilicas">
-							<figure>
-								<img src="assets/images/galeria/3-nails-conyyps.png"></a>
+							<figure class="hovereffect"> 
+								<img src="assets/images/galeria/3-nails-conyyps.png">
+								<div class="overlay">
+						           <a class="info" href="assets/images/galeria/imgrealsize/3-nails-conyyps.jpg" data-lightbox="image-1" data-title="Conyyps!">
+										<i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+								 	</a>
+						        </div>
 							</figure>
+						</li>
 						<li data-groups="all permanente">
-								<figure>
+							<figure>
+								<a href="assets/images/galeria/imgrealsize/4-nails-escupelosusana.jpg"
+								   data-lightbox="image-1" data-title="Escupelosusana">								
 									<img src="assets/images/galeria/4-nails-escupelosusana.png" alt="">
-								</figure>
+								</a>
+							</figure>
 						</li>
 						<li data-groups="all permanente">
 							<figure>
-								<img src="assets/images/galeria/2-nails-escupelosusana.png">
+								<a href="assets/images/galeria/imgrealsize/2-nails-escupelosusana.jpg"
+								   data-lightbox="image-1" data-title="Escupelosusana">
+								   <img src="assets/images/galeria/2-nails-escupelosusana.png">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all acrilicas">
 							<figure>
-								<img src="assets/images/galeria/10-nails-defqon.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/10-nails-defqon.jpg"
+								   data-lightbox="image-1" data-title="Defqon.1">
+									<img src="assets/images/galeria/10-nails-defqon.png" alt="">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all permanente">
 							<figure>
-								<img src="assets/images/galeria/7-nails-mj.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/7-nails-mj.jpg"
+								   data-lightbox="image-1" data-title="MJ">
+									<img src="assets/images/galeria/7-nails-mj.png" alt="">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all acrilicas">
 							<figure>
-								<img src="assets/images/galeria/8-nails-laiz.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/8-nails-laiz.jpg"
+								   data-lightbox="image-1" data-title="Laiz">
+									<img src="assets/images/galeria/8-nails-laiz.png" alt="">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all permanente">
 							<figure>
-								<img src="assets/images/galeria/5-nails-camilaAranguiz.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/1-nails-mc.jpg"
+								   data-lightbox="image-1" data-title="My caption">
+									<img src="assets/images/galeria/5-nails-camilaAranguiz.png" alt="">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all acrilicas">
 							<figure>
-								<img src="assets/images/galeria/6-nails-escupelosusana.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/6-nails-escupelosusana.jpg"
+								   data-lightbox="image-1" data-title="My caption">
+									<img src="assets/images/galeria/6-nails-escupelosusana.png" alt="">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all permanente">
 							<figure>
-								<img src="assets/images/galeria/11-nails-jessy.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/11-nails-jessy.jpg"
+								   data-lightbox="image-1" data-title="Jessy">
+									<img src="assets/images/galeria/11-nails-jessy.png" alt="">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all permanente">
 							<figure>
-								<img src="assets/images/galeria/12-nails-damaris.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/12-nails-damaris.jpg"
+								   data-lightbox="image-1" data-title="Damaris">
+									<img src="assets/images/galeria/12-nails-damaris.png" alt="">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all acrilicas">
 							<figure>
-								<img src="assets/images/galeria/16-nails-conyyps.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/16-nails-conyyps.jpg"
+								   data-lightbox="image-1" data-title="Conyyps">
+									<img src="assets/images/galeria/16-nails-conyyps.png" alt="">
+								</a>
 							</figure>
 						</li>
 						<li data-groups="all permanente">
 							<figure>
-								<img src="assets/images/galeria/14-nails-cata.png" alt="">
+								<a href="assets/images/galeria/imgrealsize/14-nails-cata.jpg"
+								   data-lightbox="image-1" data-title="Cata">
+									<img src="assets/images/galeria/14-nails-cata.png" alt="">
+								</a>
 							</figure>
 						</li>
 					</ul>
@@ -257,11 +308,11 @@
 						<h2 class="module-title">Contacto</h2>
 						<div class="module-line"></div>
 						<div class="module-subtitle-service">
-							<p>
+							<!--<p>
 								L@s esperamos de Lunes a Viernes desde las 11:00 a 19:00 horas, y aca poner algo para el enganche po
-							</p>
+							</p>-->
 						</div>
-						<div class="module-line"></div>
+						<!--<div class="module-line"></div> -->
 					</div>
 				</div>
 			</div><!-- .row -->
@@ -269,14 +320,14 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="row">
 						<div class="col-md-10 col-sm-12">
-							<div id="ajax-response" class="alert alert-danger"></div>
+							<div id="ajax-response" class="alert alert-success"></div>
 							<form id="contact-form" role="form" action="assets/contact/send_mail.php">
+								<div class="form-group wow fadeInLeft module-subtitle-contact" data-wow-delay=".0s">
+									<p class="margin-bot contacto">
+										<b>¿Quieres reservar una hora?, ¡Escríbenos!</b>
+									</p>
+								</div>
 								<div class="ajax-hidden ">
-									<div class="form-group wow fadeInLeft module-subtitle-contact" data-wow-delay=".0s">
-										<p class="margin-bot contacto">
-											<b>¿Quieres reservar una hora?, Escríbenos!</b>
-										</p>
-									</div>
 									<div class="form-group wow fadeInLeft" data-wow-delay=".1s">
 										<label class="radio-inline">
 										  <input type="radio" name="asunto" value="1"> <label>Agendar Hora</label>
@@ -436,6 +487,8 @@
 	<script src="assets/js/imagesloaded.js"></script>
 	<script src="assets/js/classie.js"></script>
 	<script src="assets/js/AnimOnScroll.js"></script>
+	<script src="assets/js/lightbox.min.js"></script>
+	<script src="assets/js/sweetalert2.all.min.js"></script>
 	<script>
 		new AnimOnScroll( document.getElementById( 'grid' ), {
 			minDuration : 0.4,
