@@ -11,3 +11,6 @@ CREATE TABLE contacto (
     mensaje varchar(500) NOT NULL,
     PRIMARY KEY (id)
 )
+
+ALTER TABLE contacto
+ADD cantidad_diseno int;

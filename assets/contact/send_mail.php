@@ -17,18 +17,20 @@ $security = new Security();
 if ($enviado)
 {
     // Collect POST data from form
-    $asunto   = $security->xss_clean($_POST['asunto']);
-    $nombre   = $security->xss_clean($_POST['nombre']);
-    $email    = $security->xss_clean($_POST['email']);
-    $telefono = $security->xss_clean($_POST['telefono']);
-    $comuna   = $security->xss_clean($_POST['comuna']);
-    $servicio = $security->xss_clean($_POST['servicio']);
-    $fecha    = $security->xss_clean($_POST['fecha']);
-    $hora     = $security->xss_clean($_POST['hora']);
-    $mensaje  = $security->xss_clean($_POST['mensaje']);
+    $asunto     = $security->xss_clean($_POST['asunto']);
+    $nombre     = $security->xss_clean($_POST['nombre']);
+    $email      = $security->xss_clean($_POST['email']);
+    $telefono   = $security->xss_clean($_POST['telefono']);
+    $comuna     = $security->xss_clean($_POST['comuna']);
+    $servicio   = $security->xss_clean($_POST['servicio']);
+    $fecha      = $security->xss_clean($_POST['fecha']);
+    $hora       = $security->xss_clean($_POST['hora']);
+    $mensaje    = $security->xss_clean($_POST['mensaje']);
+    $disenos    = $security->xss_clean($_POST['disenos']);
 
     $servicioNombre = "";
     $horaNombre = "";
+    $asuntoNombre = "";
     $asuntoNombre = "";
 
     // Prefedined Variables
@@ -59,6 +61,28 @@ if ($enviado)
         $horaNombre = "19:00 PM"; 
     }
 
+    if ($disenos == "1") {
+        $cantidadDiseno = "1 Diseño"; 
+    } elseif($disenos == "2") {
+        $cantidadDiseno = "2 Diseños"; 
+    } elseif($disenos == "3") {
+        $cantidadDiseno = "3 Diseños"; 
+    } elseif($disenos == "4") {
+        $cantidadDiseno = "4 Diseños"; 
+    } elseif($disenos == "5") {
+        $cantidadDiseno = "5 Diseños"; 
+    } elseif($disenos == "6") {
+        $cantidadDiseno = "6 Diseños"; 
+    } elseif($disenos == "7") {
+        $cantidadDiseno = "7 Diseños"; 
+    } elseif($disenos == "8") {
+        $cantidadDiseno = "8 Diseños"; 
+    } elseif($disenos == "9") {
+        $cantidadDiseno = "9 Diseños"; 
+    } elseif($disenos == "10") {
+        $cantidadDiseno = "10 Diseños"; 
+    }
+
     if ($asunto == "1") {
         $asuntoNombre ="Agendar Hora";
     } elseif($asunto == "2") {
@@ -75,6 +99,7 @@ if ($enviado)
     <tr><td valign="top">Telefono:</td><td>' . $telefono . '</td></tr>
     <tr><td valign="top">Comuna:</td><td>' . $comuna . '</td></tr>
     <tr><td valign="top">Servicio:</td><td>' . $servicioNombre . '</td></tr>
+    <tr><td valign="top">Cantidad de diseños:</td><td>' . $cantidadDiseno . '</td></tr>
     <tr><td valign="top">Fecha:</td><td>' . $fecha . '</td></tr>
     <tr><td valign="top">Hora:</td><td>' . $horaNombre . '</td></tr>
     <tr><td valign="top">Mensaje:</td><td>' . $mensaje . '</td></tr>

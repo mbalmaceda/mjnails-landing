@@ -9,6 +9,7 @@ if(isset($_POST['enviar'])) {
     $telefono = $_POST['telefono'];
     $servicio = $_POST['servicio'];
     $mensaje = $_POST['mensaje'];
+    $cantidad_diseno = $_POST['disenos'];
         
     // checking empty fields
     if(empty($nombre) || empty($email) || empty($telefono)
@@ -16,22 +17,23 @@ if(isset($_POST['enviar'])) {
         echo "Al menos debes completar los campos seleccionados en el formulario";
         return 0;
     } else {
-        $sql = "INSERT INTO contacto (tipo_solicitud, nombre, email, telefono, comuna, servicio, fecha, hora, mensaje)
-                VALUES (?,?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO contacto (tipo_solicitud, nombre, email, telefono, comuna, servicio, fecha, hora, mensaje, cantidad_diseno)
+                VALUES (?,?,?,?,?,?,?,?,?,?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "issssisis", $asunto,$nombre,$email,$telefono,$comuna,$servicio,$fecha,$hora,$mensaje);
+            mysqli_stmt_bind_param($stmt, "issssisisi", $asunto,$nombre,$email,$telefono,$comuna,$servicio,$fecha,$hora,$mensaje, $cantidad_diseno);
 
-            $asunto   = $_REQUEST['asunto'];
-            $nombre   = $_REQUEST['nombre'];
-            $email    = $_REQUEST['email'];
-            $telefono = $_REQUEST['telefono'];
-            $comuna   = $_REQUEST['comuna'];
-            $servicio = $_REQUEST['servicio'];
-            $fecha    = $_REQUEST['fecha'];
-            $hora     = $_REQUEST['hora'];
-            $mensaje  = $_REQUEST['mensaje'];
+            $asunto           = $_REQUEST['asunto'];
+            $nombre           = $_REQUEST['nombre'];
+            $email            = $_REQUEST['email'];
+            $telefono         = $_REQUEST['telefono'];
+            $comuna           = $_REQUEST['comuna'];
+            $servicio         = $_REQUEST['servicio'];
+            $fecha            = $_REQUEST['fecha'];
+            $hora             = $_REQUEST['hora'];
+            $mensaje          = $_REQUEST['mensaje'];
+            $cantidad_diseno  = $_REQUEST['disenos'];
             // Attempt to execute the prepared statement
             if($enviado = mysqli_stmt_execute($stmt)){
                 //echo "Se han insertado los datos ";
