@@ -1103,9 +1103,20 @@ button.mfp-close {
 	width: 200px;
 }
 
+#reserva iframe.agendapro {
+	min-height: 1144px;
+	height: 100%;
+}
+
 /* ---------------------------------------------- /*
  * Media
 /* ---------------------------------------------- */
+@media (max-width: 1200px) {
+	#reserva iframe.agendapro {
+		min-height: 675px;
+		height: 100%;
+	}
+}
 
 @media (max-width: 991px) {
 
@@ -1131,6 +1142,11 @@ button.mfp-close {
 
 	.mfp-close:active {
 		top: -59px;
+	}
+
+	#reserva iframe.agendapro {
+		min-height: 725px;
+		height: 100%;
 	}
 
 }
@@ -1160,9 +1176,18 @@ button.mfp-close {
 	.navbar-toggle{
 		margin-top:20px;
 	}
+
+	#reserva iframe.agendapro {
+		min-height: 760px;
+		height: 100%;
+	}
 }
 
 @media (max-width: 480px) {
+	#reserva iframe.agendapro {
+		min-height: 815px;
+		height: 100%;
+	}
 
 	h1 {
 		font-size: 34px;
